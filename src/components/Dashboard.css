@@ -1,0 +1,87 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.chart-container {
+  background: white;
+  border: 2px solid black;
+  padding: 20px;
+  margin: 20px;
+  width: 80%; 
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#imageCarousel {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin-top: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-image {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  animation: spin 10s linear infinite;
+  object-fit: cover;
+  z-index: 1;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.carousel-image:nth-child(download.carousel-image:nth-child(download.jpg)) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg) translateX(120px);
+  z-index: 3; /* Ensure this is on top */
+}
+
+.carousel-image:nth-child(.carousel-image:nth-child(download.carousel-image:nth-child(download.jpg))) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(120deg) translateX(120px);
+  z-index: 2;
+}
+
+.carousel-image:nth-child(imm.carousel-image:nth-child(imm.jpeg)) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(240deg) translateX(120px);
+  z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .chart-container {
+    width: 100%;
+    margin: 10px;
+  }
+
+  #imageCarousel {
+    width: 200px;
+    height: 200px;
+  }
+
+  .carousel-image {
+    width: 60px;
+    height: 60px;
+  }
+}
+
